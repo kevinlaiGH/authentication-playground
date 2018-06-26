@@ -6,6 +6,10 @@ const bodyParser = require("body-Parser");
 const morgan = require("morgan");
 const app = express();
 const router = require("./router");
+const mongoose = require("mongoose");
+
+// DB setup
+mongoose.connect("mongodb://localhost/auth");
 
 // App setup (middleware)
 app.use(morgan("combined"));
